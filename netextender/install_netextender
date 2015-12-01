@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+
+cd /netextender/netExtenderClient/
+spawn ./install
+expect -re "^.*Set pppd to run as root.*?.*$"
+sleep .1
+send -- "y"
+expect -re ".*Type 'netExtenderGui'"
